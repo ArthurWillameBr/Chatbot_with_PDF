@@ -71,7 +71,7 @@ def user_input(user_question):
 
 def main():
     st.set_page_config("Chat PDF")
-    st.header("Pergunte ao seu PDF usando gemini")
+    st.header("Pergunte ao seu PDF usando Gemini")
 
     user_question = st.text_input("Faça perguntas ao seu arquivo PDF")
 
@@ -80,7 +80,7 @@ def main():
 
     with st.sidebar:
         st.title("Menu:")
-        pdf_docs = st.file_uploader("Carregue seus arquivos PDF e clique no botão Enviar e processa", accept_multiple_files=True)
+        pdf_docs = st.file_uploader("Carregue seus arquivos PDF e clique no botão enviar e processar", accept_multiple_files=True)
         if st.button("Enviar e Processar"):
             with st.spinner("Processando..."):
                 raw_text = get_pdf_text(pdf_docs)
